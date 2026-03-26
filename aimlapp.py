@@ -8,12 +8,12 @@ num_subjects = st.number_input("Enter number of subjects", min_value=1, step=1)
 subjects = {}
 exam_dates = {}
 for i in range(num_subjects):
-    subjects = st.text_input(f"Subject {i+1} name", key=f"sub{i}")
+    subject = st.text_input(f"Subject {i+1} name", key=f"sub{i}")
     if subject:
         num_topics = st.number_input(f"Number of topics in {subject}", min_value=1, step=1, key=f"top{i}")
         topics = []
         for j in range(num_topics):
-            topic_name = st.yexy_input(f"{subject} - Topic {j+1}", key=f"{subject}{j}")
+            topic_name = st.text_input(f"{subject} - Topic {j+1}", key=f"{subject}{j}")
             priority_label = st.selectbox(f"Priority for {topic_name if topic_name else f'Topic {j+1}'}", ["Low","Medium","High"], key=f"p{subject}{j}")
             # Convert label to number
             if priority_label == "Low":
@@ -23,10 +23,10 @@ for i in range(num_subjects):
             else:
                 priority = 3
             if topic_name:
-                topics.append({"topic": opic_name, "priority": priority})
+                topics.append({"topic": topic_name, "priority": priority})
         subjects[subject] = topics
         exam_dates[subject] = st.date_input(f"Exam date for {subject}", key=f"date{i}")
- daily_hours = st.slider("Study hours per day", 1, 10, 4)
+daily_hours = st.slider("Study hours per day", 1, 10, 4)
 # BUTTON
 if st.button("Generate Study Plan"):
     today = datetime.today()
@@ -39,7 +39,7 @@ if st.button("Generate Study Plan"):
         exam_date = datetime.combine(exam_dates[subject], datetime.min.time())
         #Add revision days
         for i in range(revision_days):
-            rev_day = (exak_date - timedelta(days = i + 1)).strftime("%Y-%m-%d")
+            rev_day = (exam_date - timedelta(days = i + 1)).strftime("%Y-%m-%d")
             revision_schedule.setdefault(rev_day, []).append(f"🔁 {subject} - Revision")
         for t in topics:
             hours_needed = t["priority"] * 2
@@ -67,7 +67,7 @@ if st.button("Generate Study Plan"):
                 schedule[day_str]["time_used"] += study_time
                 hours_left -= study_time
             else:
-                current_day += timedelta(day=1)
+                current_day += timedelta(days=1)
     #Add revision days to schedule
     for day, tasks in revision_schedule.items():
         schedule.setdefault(day,{"time_used": 0,"tasks": []})
