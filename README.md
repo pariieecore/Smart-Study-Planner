@@ -35,3 +35,6 @@ Generates a day-wise study plan including revision sessions before exams.
 * Add progress tracking
 * Add AI-based recommendations
 * Deploy online
+
+🌐 Live Demo
+https://smart-study-planner-zzpnqtnlrwkqklhxcssamq.streamlit.app/
