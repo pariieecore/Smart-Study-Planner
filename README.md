@@ -2,11 +2,11 @@
 
 🔍 Description
 
-An AI-based Smart Study Planner that generates a personalized daily study schedule using subject priorities, exam dates, and available study time, with automatic revision planning.
+An AI based Smart Study Planner that generates a personalized daily study schedule using no. of subjects,subjects name,topics for each subject,giving priorities to each topic, exam dates, and available study time, with automatic revision planning.
 
 🚀 Features
 
-* Priority-based scheduling (Low, Medium, High)
+* Priority based scheduling (Low, Medium, High)
 * Automatic revision days before exams
 * User-friendly web interface
 * Intelligent time allocation
