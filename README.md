@@ -6,7 +6,7 @@ An AI based Smart Study Planner that generates a personalized daily study schedu
 
 🚀 Features
 
-* Priority based scheduling (Low, Medium, High)
+* Priority based scheduling (High to Low)
 * Automatic revision days before exams
 * User-friendly web interface
 * Intelligent time allocation
