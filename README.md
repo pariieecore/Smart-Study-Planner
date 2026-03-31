@@ -1,23 +1,23 @@
-📚 Smart Study Planner (AI-Based)
+Smart Study Planner (AI-Based)
 
-🔍 Description
+Description
 
 An AI based Smart Study Planner that generates a personalized daily study schedule using no. of subjects,subjects name,topics for each subject,giving priorities to each topic, exam dates, and available study time, with automatic revision planning.
 
-🚀 Features
+Features
 
 * Priority based scheduling (High to Low)
 * Automatic revision days before exams
 * User-friendly web interface
 * Intelligent time allocation
 
-🧠 Technologies Used
+Technologies Used
 
 * Python
 * Streamlit
 * datetime
 
-▶️ How to Run
+How to Run
 
 1. Install Streamlit:
    pip install streamlit
@@ -26,15 +26,15 @@ An AI based Smart Study Planner that generates a personalized daily study schedu
    streamlit run aimlapp.py
 
 
-📅 Output
+Output
 
 Generates a day-wise study plan including revision sessions before exams.
 
-💡 Future Scope
+Future Scope
 
 * Add progress tracking
 * Add AI-based recommendations
 * Deploy online
 
-🌐 Live Demo
+Live Demo
 https://smart-study-planner-zzpnqtnlrwkqklhxcssamq.streamlit.app/
